@@ -51,6 +51,9 @@
   <ItemGroup>
     <Compile Include="Case.cs" />
     <Compile Include="CenteraContext.cs" />
+    <Compile Include="DnsSample.cs" />
+    <Compile Include="DnsSampleStatus.cs" />
+    <Compile Include="Enum\DnsSampleStatus.cs" />
     <Compile Include="Migrations\201610090719288_AddedCase.cs" />
     <Compile Include="Migrations\201610090719288_AddedCase.Designer.cs">
       <DependentUpon>201610090719288_AddedCase.cs</DependentUpon>
@@ -62,6 +65,10 @@
     <Compile Include="Migrations\201610090945512_AddedSlightVehicle.cs" />
     <Compile Include="Migrations\201610090945512_AddedSlightVehicle.Designer.cs">
       <DependentUpon>201610090945512_AddedSlightVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610091109354_AddedDnsSample.cs" />
+    <Compile Include="Migrations\201610091109354_AddedDnsSample.Designer.cs">
+      <DependentUpon>201610091109354_AddedDnsSample.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,7 +89,11 @@
     <EmbeddedResource Include="Migrations\201610090945512_AddedSlightVehicle.resx">
       <DependentUpon>201610090945512_AddedSlightVehicle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091109354_AddedDnsSample.resx">
+      <DependentUpon>201610091109354_AddedDnsSample.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
