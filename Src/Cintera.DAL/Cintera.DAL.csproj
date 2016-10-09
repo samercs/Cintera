@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Case.cs" />
     <Compile Include="CenteraContext.cs" />
+    <Compile Include="DnsLab.cs" />
     <Compile Include="DnsSample.cs" />
     <Compile Include="DnsSampleStatus.cs" />
     <Compile Include="Enum\DnsSampleStatus.cs" />
@@ -70,10 +71,37 @@
     <Compile Include="Migrations\201610091109354_AddedDnsSample.Designer.cs">
       <DependentUpon>201610091109354_AddedDnsSample.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610091129362_AddedDnsLab.cs" />
+    <Compile Include="Migrations\201610091129362_AddedDnsLab.Designer.cs">
+      <DependentUpon>201610091129362_AddedDnsLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610091133193_SeedDnsLab.cs" />
+    <Compile Include="Migrations\201610091133193_SeedDnsLab.Designer.cs">
+      <DependentUpon>201610091133193_SeedDnsLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610091202243_AddedRegion.cs" />
+    <Compile Include="Migrations\201610091202243_AddedRegion.Designer.cs">
+      <DependentUpon>201610091202243_AddedRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610091205238_SeededRegions.cs" />
+    <Compile Include="Migrations\201610091205238_SeededRegions.Designer.cs">
+      <DependentUpon>201610091205238_SeededRegions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610091303520_AddView1.cs" />
+    <Compile Include="Migrations\201610091303520_AddView1.Designer.cs">
+      <DependentUpon>201610091303520_AddView1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="Script.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Script.resx</DependentUpon>
+    </Compile>
     <Compile Include="Sighting.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="View1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -92,8 +120,35 @@
     <EmbeddedResource Include="Migrations\201610091109354_AddedDnsSample.resx">
       <DependentUpon>201610091109354_AddedDnsSample.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091129362_AddedDnsLab.resx">
+      <DependentUpon>201610091129362_AddedDnsLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091133193_SeedDnsLab.resx">
+      <DependentUpon>201610091133193_SeedDnsLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091202243_AddedRegion.resx">
+      <DependentUpon>201610091202243_AddedRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091205238_SeededRegions.resx">
+      <DependentUpon>201610091205238_SeededRegions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091303520_AddView1.resx">
+      <DependentUpon>201610091303520_AddView1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Script.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Script.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\CountryByState.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertRegion.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddView1.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

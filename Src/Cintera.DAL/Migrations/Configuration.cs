@@ -4,6 +4,7 @@ namespace Cintera.DAL.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using DAL.Enum;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Cintera.DAL.CenteraContext>
     {
@@ -26,6 +27,12 @@ namespace Cintera.DAL.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.DnsSampleStatuses.AddOrUpdate(i => i.Id, Enum.GetValues(typeof(DnsSampleStatusEnum)).Cast<DnsSampleStatusEnum>().Select(i => new DnsSampleStatus
+            {
+                Id = i,
+                Name = i.ToString()
+            }).ToArray());
         }
     }
 }

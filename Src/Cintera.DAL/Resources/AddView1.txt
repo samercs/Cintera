@@ -1,0 +1,3 @@
+CREATE VIEW V_View1  
+AS  
+select ISNULL(ParentId, -1) as Id, count(*) as Child from region where ParentId <>-1 GROUP BY ParentId 

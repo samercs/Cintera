@@ -24,10 +24,20 @@ namespace Cintera.DAL
                 .HasMaxLength(10)
                 .IsRequired();
 
+            modelBuilder.Entity<DnsLab>().Property(i => i.Name).IsRequired().HasMaxLength(50);
+
+            modelBuilder.Entity<Region>().Property(i => i.Name).IsRequired().HasMaxLength(255);
+            modelBuilder.Entity<Region>().HasOptional(i => i.Parent).WithMany().HasForeignKey(i => i.ParentId);
+            modelBuilder.Entity<View1>().ToTable("V_View1").HasKey(x => new { x.Id });
+
             base.OnModelCreating(modelBuilder);
         }
 
         public IDbSet<Case> Cases { get; set; }
         public IDbSet<DnsSample> DnsSamples { get; set; }
+        public IDbSet<DnsSampleStatus> DnsSampleStatuses { get; set; }
+        public IDbSet<Region> Regions { get; set; }
+        public IDbSet<View1> View1 { get; set; }
+
     }
 }

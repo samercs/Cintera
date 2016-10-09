@@ -1,0 +1,8 @@
+INSERT INTO REGION
+SELECT distinct Country as Name,  null as ParentId, 'Country' as Discriminator from #CountyByState 
+
+INSERT INTO REGION
+SELECT distinct State as Name, RegionId as ParentId, 'State' as Discriminator  from #CountyByState JOIN REGION on Name =  Country and Discriminator='Country'
+
+INSERT INTO REGION
+SELECT distinct County as Name, RegionId as ParentId, 'County' as Discriminator  from #CountyByState JOIN REGION on Name =  State and Discriminator='State'

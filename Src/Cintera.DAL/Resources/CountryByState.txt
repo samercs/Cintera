@@ -1,0 +1,14 @@
+Create Table #CountyByState (
+Country nvarchar(200) NOT NULL,
+State nvarchar(200) NOT NULL,
+County nvarchar(200) NOT NULL
+)
+
+insert #CountyByState(Country, State, County) values 
+
+('Jordan', 'Irbid', 'Ramtha'),
+('Jordan', 'Irbid', 'Ramtha2'),
+('Jordan', 'Irbid', 'Ramtha3'),
+('Jordan', 'Amman', 'Bayader'),
+('Jordan', 'Amman', 'Bayader2'),
+('Jordan', 'Amman', 'Bayader3')
