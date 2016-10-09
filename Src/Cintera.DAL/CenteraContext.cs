@@ -13,6 +13,8 @@ namespace Cintera.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Entity<Vehicle>().Property(i => i.VehicleIdentitficationNumber).HasMaxLength(17).IsRequired();
+            modelBuilder.Entity<Sighting>().Property(i => i.Address).HasMaxLength(256).IsRequired();
             base.OnModelCreating(modelBuilder);
         }
 
