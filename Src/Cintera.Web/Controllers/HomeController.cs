@@ -7,19 +7,19 @@ using Cintera.DAL;
 
 namespace Cintera.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ApplicationController
     {
-        private CenteraContext _centera;
+        private readonly ICerteraContext _context;
 
-        public HomeController()
+        public HomeController(IDatabaseContext context) : base(context)
         {
-            _centera = new CenteraContext();
+            _context = context.GetContext();
         }
 
 
         public ActionResult Index()
         {
-            var model = _centera.View1.ToList();
+            var model = _context.View1.ToList();
             return View(model);
         }
 
@@ -36,5 +36,7 @@ namespace Cintera.Web.Controllers
 
             return View();
         }
+
+        
     }
 }

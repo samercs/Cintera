@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Cintera.DAL
 {
-    public class CenteraContext : DbContext
+    public class CenteraContext : IdentityDbContext<ApplicationUser>, ICerteraContext
     {
         public CenteraContext() : base("DefaultConnection")
         {
@@ -39,5 +41,9 @@ namespace Cintera.DAL
         public IDbSet<Region> Regions { get; set; }
         public IDbSet<View1> View1 { get; set; }
 
+        public static CenteraContext Create()
+        {
+            return new CenteraContext();
+        }
     }
 }
