@@ -4,7 +4,7 @@ namespace Cintera.DAL
 {
     public interface ICerteraContext
     {
-        IDbSet<Case> Cases { get; set; }
+        IDbSet<Invistigation> Cases { get; set; }
         IDbSet<DnsSample> DnsSamples { get; set; }
         IDbSet<DnsSampleStatus> DnsSampleStatuses { get; set; }
         IDbSet<Region> Regions { get; set; }

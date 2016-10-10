@@ -3,8 +3,8 @@
     public class Vehicle
     {
         public int VehicleId { get; set; }
-        public int CaseId { get; set; }
-        public virtual Case Case { get; set; }
+        public int InvistigationId { get; set; }
+        public virtual Invistigation Invistigation { get; set; }
         public string VehicleIdentitficationNumber { get; set; }
     }
 }

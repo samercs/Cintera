@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
-    <Compile Include="Case.cs" />
+    <Compile Include="Invistigation.cs" />
     <Compile Include="CenteraContext.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="DnsLab.cs" />
@@ -111,6 +111,10 @@
     <Compile Include="Migrations\201610101158293_RenameIdOnDnsLab.Designer.cs">
       <DependentUpon>201610101158293_RenameIdOnDnsLab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610101231094_RenameCaseTable.cs" />
+    <Compile Include="Migrations\201610101231094_RenameCaseTable.Designer.cs">
+      <DependentUpon>201610101231094_RenameCaseTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Region.cs" />
@@ -160,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610101158293_RenameIdOnDnsLab.resx">
       <DependentUpon>201610101158293_RenameIdOnDnsLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610101231094_RenameCaseTable.resx">
+      <DependentUpon>201610101231094_RenameCaseTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Script.resx">
       <Generator>ResXFileCodeGenerator</Generator>

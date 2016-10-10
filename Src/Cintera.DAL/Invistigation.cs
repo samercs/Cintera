@@ -2,9 +2,9 @@
 
 namespace Cintera.DAL
 {
-    public class Case
+    public class Invistigation
     {
-        public int CaseId { get; set; }
+        public int InvistigationId { get; set; }
 
         public virtual ICollection<Sighting> Sightings { get; set; }
         public virtual ICollection<Vehicle> Vehicles { get; set; }

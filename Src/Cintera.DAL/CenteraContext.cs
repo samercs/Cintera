@@ -35,7 +35,7 @@ namespace Cintera.DAL
             base.OnModelCreating(modelBuilder);
         }
 
-        public IDbSet<Case> Cases { get; set; }
+        public IDbSet<Invistigation> Cases { get; set; }
         public IDbSet<DnsSample> DnsSamples { get; set; }
         public IDbSet<DnsSampleStatus> DnsSampleStatuses { get; set; }
         public IDbSet<Region> Regions { get; set; }
